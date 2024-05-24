@@ -6,6 +6,7 @@ This is a web application template built with Next.js, tRPC, TailwindCSS v4, Bio
 
 This web application template is built with the following technologies:
 
+- **React 19**: A JavaScript library for building user interfaces.
 - **Next.js**: A React framework for building JavaScript applications.
 - **tRPC**: A framework for building typesafe APIs.
 - **Biome**: A modern lint and formatter.
@@ -31,7 +32,11 @@ These instructions will get you a copy of the project up and running on your loc
    ```
    bun install
    ```
-3. Start the development server
+3. Run WS patch for support Websocket in NextJS
+   ```
+   bun run patch
+   ```
+4. Start the development server
    ```
    bun run dev
    ```
