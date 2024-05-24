@@ -8,7 +8,8 @@
     "start": "next start",
     "patch": "next-ws-cli patch --yes",
     "format": "bunx biome format --write ./**/*.{ts,tsx}",
-    "lint": "bunx biome lint --apply-unsafe ./**/*.{ts,tsx}"
+    "lint": "bunx biome lint --apply-unsafe ./**/*.{ts,tsx}",
+    "postinstall": "bun run patch"
   },
   "packageManager": "^bun@1.0.0",
   "dependencies": {
@@ -35,8 +36,8 @@
     "@types/react-dom": "^18",
     "@types/ws": "^8.5.10",
     "next-ws-cli": "^1.0.1",
-    "postcss": "^8",
+    "postcss": "^8.4.38",
     "tailwindcss": "^4.0.0-alpha.15",
-    "typescript": "^5"
+    "typescript": "^5.4.5"
   }
 }
