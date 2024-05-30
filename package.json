@@ -9,7 +9,7 @@
     "patch": "next-ws-cli patch --yes",
     "format": "bunx biome format --write ./**/*.{ts,tsx}",
     "lint": "next lint",
-    "postinstall": "bun run patch"
+    "postprepare": "bun run patch"
   },
   "packageManager": "^bun@1.0.0",
   "dependencies": {
@@ -20,6 +20,7 @@
     "@trpc/next": "^11.0.0-rc.366",
     "@trpc/react-query": "^11.0.0-rc.366",
     "@trpc/server": "^11.0.0-rc.366",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-487cb0e-20240529",
     "next": "15.0.0-canary.1",
     "next-ws": "^1.0.1",
     "react": "^19.0.0-rc-4c2e457c7c-20240522",
@@ -34,7 +35,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/ws": "^8.5.10",
-    "babel-plugin-react-compiler": "^0.0.0-experimental-487cb0e-20240529",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-react-compiler": "^0.0.0-experimental-a97cca1-20240529",
