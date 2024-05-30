@@ -1,5 +1,5 @@
-import { adminChecker, authChecker } from "./middlewares/user";
-import { procedure } from "./trpc";
+import { adminChecker, authChecker } from './middlewares/user';
+import { procedure } from './trpc';
 
 /**
  * Public procedure

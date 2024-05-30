@@ -1,18 +1,18 @@
-import superjson from "superjson";
+import superjson from 'superjson';
 
-import { createWSClient, httpBatchLink, splitLink, wsLink } from "@trpc/client";
-import { createTRPCNext } from "@trpc/next";
-import { ssrPrepass } from "@trpc/next/ssrPrepass";
-import type { AppRouter } from "@/server/routers/_app";
+import { createWSClient, httpBatchLink, splitLink, wsLink } from '@trpc/client';
+import { createTRPCNext } from '@trpc/next';
+import { ssrPrepass } from '@trpc/next/ssrPrepass';
+import type { AppRouter } from '@/server/routers/_app';
 
 const wsClient = createWSClient({
-  url: "ws://localhost:3000/api/ws",
+  url: 'ws://localhost:3000/api/ws',
 });
 
 function getBaseUrl() {
-  if (typeof window !== "undefined")
+  if (typeof window !== 'undefined')
     // browser should use relative path
-    return "";
+    return '';
   if (process.env.VERCEL_URL)
     // reference for vercel.com
     return `https://${process.env.VERCEL_URL}`;
@@ -27,18 +27,18 @@ export const trpc = createTRPCNext<AppRouter>({
   transformer: superjson,
   config(opts) {
     const { ctx } = opts;
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       // during client requests
       return {
         links: [
           splitLink({
-            condition: (op) => op.type === "subscription",
+            condition: (op) => op.type === 'subscription',
             true: wsLink({
               client: wsClient,
               transformer: superjson,
             }),
             false: httpBatchLink({
-              url: "/api/trpc",
+              url: '/api/trpc',
               transformer: superjson,
             }),
           }),
