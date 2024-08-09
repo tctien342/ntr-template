@@ -1,15 +1,15 @@
 # NTR Tempalte
 
-This is a web application template built with Next.js, tRPC, TailwindCSS v4, Biome, and Bun.js.
+This is a web application template built with Next.js, tRPC, TailwindCSS, Eslint, MilionJS and Bun.js.
 
 ## Technologies Used
 
 This web application template is built with the following technologies:
 
-- **React 19**: A JavaScript library for building user interfaces.
+- **React**: A JavaScript library for building user interfaces.
+- **MilionJS**: A minimal, fast react compiler.
 - **Next.js**: A React framework for building JavaScript applications.
 - **tRPC**: A framework for building typesafe APIs.
-- **Biome**: A modern lint and formatter.
 - **Bun.js**: A minimal, fast JavaScript runtime.
 - **Tailwind CSS**: A utility-first CSS framework for building custom designs.
 
@@ -32,11 +32,7 @@ These instructions will get you a copy of the project up and running on your loc
    ```
    bun install
    ```
-3. Run WS patch for support Websocket in NextJS
-   ```
-   bun run patch
-   ```
-4. Start the development server
+3. Start the development server
    ```
    bun run dev
    ```

@@ -1,22 +1,22 @@
-import { TRPCError } from "@trpc/server";
-import { middleware } from "../trpc";
+import { TRPCError } from '@trpc/server'
+import { middleware } from '../trpc'
 
 export const authChecker = middleware(({ next, ctx }) => {
-  const user = ctx.session;
+  const user = ctx.session
 
   if (!user?.auth) {
-    throw new TRPCError({ code: "UNAUTHORIZED" });
+    throw new TRPCError({ code: 'UNAUTHORIZED' })
   }
 
-  return next();
-});
+  return next()
+})
 
 export const adminChecker = middleware(({ next, ctx }) => {
-  const user = ctx.session;
+  const user = ctx.session
 
   if (!user?.admin) {
-    throw new TRPCError({ code: "FORBIDDEN" });
+    throw new TRPCError({ code: 'FORBIDDEN' })
   }
 
-  return next();
-});
+  return next()
+})

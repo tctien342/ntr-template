@@ -1,13 +1,12 @@
-'use client';
+'use client'
 
-import type { AppType } from 'next/app';
-import { trpc } from '@/utils/trpc';
+import { trpc } from '@/utils/trpc'
 
-import type React from 'react';
-import type { PropsWithChildren } from 'react';
+import type React from 'react'
+import type { PropsWithChildren } from 'react'
 
 const TRPCLayout: React.FC<PropsWithChildren> = ({ children }) => {
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default trpc.withTRPC(TRPCLayout) as typeof TRPCLayout;
+export default trpc.withTRPC(TRPCLayout) as typeof TRPCLayout

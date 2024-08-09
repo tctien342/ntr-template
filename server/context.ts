@@ -1,6 +1,6 @@
-import type { CreateNextContextOptions } from '@trpc/server/adapters/next';
-import type { CreateWSSContextFnOptions } from '@trpc/server/adapters/ws';
-import { tlog } from './trpc';
+import type { CreateNextContextOptions } from '@trpc/server/adapters/next'
+import type { CreateWSSContextFnOptions } from '@trpc/server/adapters/ws'
+import { tlog } from './trpc'
 
 /**
  * Creates context for an incoming request
@@ -9,12 +9,12 @@ import { tlog } from './trpc';
 export const createContext = async (opts: CreateNextContextOptions | CreateWSSContextFnOptions) => {
   const session = {
     auth: false,
-    admin: false,
-  };
+    admin: false
+  }
 
   return {
-    session,
-  };
-};
+    session
+  }
+}
 
-export type Context = Awaited<ReturnType<typeof createContext>>;
+export type Context = Awaited<ReturnType<typeof createContext>>
