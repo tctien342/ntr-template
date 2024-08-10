@@ -1,6 +1,5 @@
 import type { CreateNextContextOptions } from '@trpc/server/adapters/next'
 import type { CreateWSSContextFnOptions } from '@trpc/server/adapters/ws'
-import { tlog } from './trpc'
 
 /**
  * Creates context for an incoming request
